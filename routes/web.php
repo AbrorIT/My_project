@@ -13,28 +13,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'abror' ;
+    return 'Hello world aaa' ;
 });
 
-
-
-Route::get('my_page', 'MyPlaceController@index');
-
-Route::get('my_age', function(){
-    return 22;
+Route::get('users/{id}/friends', function ($id) {
+    //
 });
 
-Route::get('my_name', function(){
-    return 'Abror';
-});
+Route::get('users/{id}', function ($id) {
+    //
+})->where('id', '[0-9]+');
 
-Route::get('my_firstname', function(){
-    return 'Sultanov';
-});
+Route::get('users/{username}', function ($username) {
+    //
+})->where('username', '[A-Za-z]+');
 
-Route::get('my_hobi', function(){
-    return 'programmer';
-});
-Route::get('my_word', function(){
-    return 'proga';
-});
+Route::get('posts/{id}/{slug}', function ($id, $slug) {
+    //
+})->where(['id' => '[0-9]+', 'slug' => '[A-Za-z]+']);
+
+
+
+
+
+
+
+
