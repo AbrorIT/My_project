@@ -16,24 +16,16 @@ Route::get('/', function () {
     return 'Hello world aaa' ;
 });
 
-Route::get('users/{id}/friends', function ($id) {
-    //
+Route::get('home', function (){
+    return 'ВЫ вернулись домой';
 });
 
-Route::get('users/{id}', function ($id) {
-    //
-})->where('id', '[0-9]+');
-
-Route::get('users/{username}', function ($username) {
-    //
-})->where('username', '[A-Za-z]+');
-
-Route::get('posts/{id}/{slug}', function ($id, $slug) {
-    //
-})->where(['id' => '[0-9]+', 'slug' => '[A-Za-z]+']);
-
-
-
+Route::get('user', function (){
+    return 'Пользаватель Аброр';
+});
+Route::get('abror', function (){
+    return 'Я Султанов Аброр Хайруллаевич';
+});
 
 
 
